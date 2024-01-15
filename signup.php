@@ -35,7 +35,7 @@ if ($requestMethod == "POST") {
     }
 
     // SQL query to check if the username or email already exists
-    $checkSql = "SELECT * FROM lietotajs_admins WHERE Lietotajvards = ? OR `E-pasts` = ?";
+    $checkSql = "SELECT * FROM lietotajs_admins WHERE Lietotajvards = ? OR `Epasts` = ?";
     $checkStmt = $pdo->prepare($checkSql);
     $checkStmt->execute([$username, $email]);
 
@@ -45,7 +45,7 @@ if ($requestMethod == "POST") {
     }
 
     // SQL query to insert user data
-    $sql = "INSERT INTO lietotajs_admins (Vards, Uzvards, Lietotajvards, `E-pasts`, Parole) VALUES (?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO lietotajs_admins (Vards, Uzvards, Lietotajvards, `Epasts`, Parole) VALUES (?, ?, ?, ?, ?)";
     $stmt = $pdo->prepare($sql);
 
     // Execute and check if the statement was successful

@@ -18,19 +18,19 @@ function sanitize_input($data) {
 // Check for POST request
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Sanitize user inputs
-    $username = sanitize_input($_POST['username']);
+    $Epasts = sanitize_input($_POST['Epasts']);
     $password = sanitize_input($_POST['password']);
 
-    error_log("Username: " . $username); // Debugging
+    error_log("Username: " . $Epasts); // Debugging
 
     // SQL query to fetch user data
-    $sql = "SELECT * FROM lietotajs_admins WHERE Lietotajvards = ? OR `E-pasts` = ?";
+    $sql = "SELECT * FROM lietotajs_admins WHERE Lietotajvards = ? OR Epasts = ?";
     $stmt = $pdo->prepare($sql);
     if (!$stmt) {
         error_log("Error in prepare: " . $pdo->errorInfo()[2]);
     }
 
-    if (!$stmt->execute([$username, $username])) {
+    if (!$stmt->execute([$Epasts, $Epasts])) {
         error_log("Error in execute: " . $stmt->errorInfo()[2]);
     }
 
