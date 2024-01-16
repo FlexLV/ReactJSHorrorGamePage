@@ -44,7 +44,7 @@ const LoginSignup = () => {
     return (
         <div className="container">
             <div className="box-container">
-            <video src="/images/141158 (1440p).mp4" autoPlay loop muted />
+            <video src="/images/manor_-_57598 (Original).mp4" autoPlay loop muted />
             <div className="header">
                 <div className="text">{action}</div>
                 <div className="underline"></div>

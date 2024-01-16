@@ -2,6 +2,10 @@ import React from 'react'
 import { Button } from './Button'
 import "./Footer.css"
 import { Link } from 'react-router-dom';
+import instaLogo from "./Assets/free-instagram-logo-icon-3497-thumb.png"
+import twitterLogo from "./Assets/Twitter_bird_logo_black.svg.png"
+import youtubeLogo from "./Assets/YouTube-icon-black-png.png"
+import githubLogo from "./Assets/25231.png"
 
 function Footer() {
   return (
@@ -20,39 +24,21 @@ function Footer() {
                 </form>
             </div>
         </section>
-        <div className='footer-links'>
-            <div className='footer-link-wrapper'>
+        <div className='footer-wrapper'>
+         <div className='footer-socials'>
+            <div className='footer-social-items'>
+                <a href='https://www.instagram.com/'><img src={instaLogo} alt='Instagram' /></a>
+                <a href='https://www.twitter.com/'><img src={twitterLogo} alt='Twitter' /></a>
+                <a href='https://www.twitter.com/'><img src={githubLogo} alt='Github' /></a>
+                <a href='https://www.twitter.com/'><img src={youtubeLogo} alt='Youtube' /></a>
+            </div>
+            </div>
+            <div className='footer-links'>
                 <div className='footer-link-items'>
-                    <h2>About Us</h2>
+                    <Link to="/">Home</Link>
                     <Link to="/contact">Contact</Link>
-                    <Link to="/Donwload">Donwload</Link>
-                    <Link to="/Login">Login/Register</Link>
-                    <Link to="/Login">Login/Register</Link>
-                    <Link to="/Login">Login/Register</Link>
-                </div>
-                <div className='footer-link-items'>
-                    <h2>About Us</h2>
-                    <Link to="/contact">Contact</Link>
-                    <Link to="/Donwload">Donwload</Link>
-                    <Link to="/Login">Login/Register</Link>
-                    <Link to="/Login">Login/Register</Link>
-                    <Link to="/Login">Login/Register</Link>
-                </div>
-                <div className='footer-link-items'>
-                    <h2>About Us</h2>
-                    <Link to="/contact">Contact</Link>
-                    <Link to="/Donwload">Donwload</Link>
-                    <Link to="/Login">Login/Register</Link>
-                    <Link to="/Login">Login/Register</Link>
-                    <Link to="/Login">Login/Register</Link>
-                </div>
-                <div className='footer-link-items'>
-                    <h2>About Us</h2>
-                    <Link to="/contact">Contact</Link>
-                    <Link to="/Donwload">Donwload</Link>
-                    <Link to="/Login">Login/Register</Link>
-                    <Link to="/Login">Login/Register</Link>
-                    <Link to="/Login">Login/Register</Link>
+                    <Link to="/donwload">Download</Link>
+                    <Link to="/forum">Forum</Link>
                 </div>
             </div>
         </div>

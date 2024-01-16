@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+body{
 
+}
 .page-not-found {
     display: flex;
     flex-direction: column; /* Stack children vertically */
@@ -8,22 +10,20 @@
     font-family: 'Lemon', serif;
     width: 100vw;
     height: 100vh;
-    background-color: #fff;
-    text-align: center; /* Center text for all child elements */
+    text-align: center;
+    background-color: aliceblue; /* Center text for all child elements */
 }
-.video-container {
-    position: relative;
-    width: 640px; /* Set your desired video dimensions */
-    height: 360px;
-  }
+
   
-  .green-screen-video {
-    width: 100%;
-    height: 100%;
-    filter: chroma(green); /* Replace 'green' with the actual color you want to remove */
-    background: transparent; /* Set the background to transparent */
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-  }
+.green-screen-video {
+  object-fit: cover;
+  width: 40vh;
+  height: 40vh;
+  position: fixed;
+  left: 50%;
+  top: 75%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  background-color: transparent;
+  display: flex;
+}

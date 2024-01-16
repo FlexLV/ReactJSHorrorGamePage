@@ -24,7 +24,7 @@ video {
     margin-top: 60px;
     width: 100vh;
     height: 90vh;
-    background-color: rgba(253, 253, 253, 0.884);
+    background-color: rgba(232, 228, 228, 0.747);
     position: relative;
 }
 .header{
@@ -47,6 +47,7 @@ video {
     height: 6px;
     background: #3c009d;
     border-radius: 9px;
+    position: relative;
 }
 .inputs{
     margin-top: 55px;
@@ -59,9 +60,10 @@ video {
     align-items: center;
     margin: auto;
     width: 480px;
-    height: 80px;
-    background: #eaeaea;
+    height: 55px;
+    background: #d8d8d8;
     border-radius: 6px;
+    position: relative;
 }
 .input img{
     margin: 0px 30px;
