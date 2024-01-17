@@ -27,6 +27,13 @@ video {
     background-color: rgba(232, 228, 228, 0.747);
     position: relative;
 }
+.box-container-large{
+    margin-top: 30px;
+    width: 100vh;
+    height: 190vh;
+    background-color: rgba(232, 228, 228, 0.747);
+    position: relative;
+}
 .header{
     display: flex;
     flex-direction: column;

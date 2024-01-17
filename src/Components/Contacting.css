@@ -4,9 +4,9 @@
     background-color: rgb(245, 245, 245);
     display: flex;
     justify-content: space-between; /* Add this to space out children */
-    height: 115vh;
-    width: 99.1vw; 
-    padding: 22vh 31vh 0px ;
+    height: 130vh;
+    width: 100%; 
+    padding: 24vh 31vh 0px ;
 }
 
 .aboutus {

@@ -76,7 +76,7 @@ const LoginSignup = () => {
             </div>
             {action === "Signup" ? null : <div className="forgot-password">Lost Password? <span>Click Here!</span></div>}
             <div className="submit-container">
-                <div className={action === "Login" ? "submit" : "submit gray"} onClick={() => { setAction("Signup") }} >Sign Up</div>
+                <div className={action === "Login" ? "submit"  : "submit gray" } onClick={() => { setAction("Signup") }} >Sign Up</div>
                 <div className={action === "Signup" ? "submit" : "submit gray"} onClick={() => { setAction("Login") }} >Login</div>
                 <button className={action === "Signup" ? "submit" : "submit gray"} type="submit">Submit</button>
 

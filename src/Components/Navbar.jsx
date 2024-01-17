@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Button } from './Button';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
-import HeroSection from './HeroSection';
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -69,17 +68,8 @@ function Navbar() {
               </Link>
             </li>
 
-            <li>
-              <Link
-                to='/login'
-                className='nav-links-mobile'
-                onClick={closeMobileMenu}
-              >
-                Login/Register
-              </Link>
-            </li>
           </ul>
-          {button && <Button buttonStyle='btn--outline'
+          {button && <Button link="/login" buttonStyle='btn--outline'
           buttonSize="btn--medium">Login/Register</Button>}
         </div>
       </nav>
