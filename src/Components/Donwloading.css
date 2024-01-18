@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
 .donwloading-container {
     width: 100%;
     height: 200vh;
@@ -16,71 +16,84 @@
 }
 
 .donwload-part {
-    width: 50%;
-    height: 50vh;
+    width: 60%;
+    height: 70vh;
     display: flex;
     flex-direction: column; /* Stack items vertically */
     justify-content: center;
     align-items: center;
-    background-color: #fff;
-    box-shadow: 0 0 15px , 0 0 25px , 0 0 35px;
+    background-color: #000000;
+    box-shadow: 0 0 15px #7d7c7c , 0 0 25px #6f6e6e , 0 0 35px #747474;
+    margin-top: 36vh;
+    
 }
 .donwload-part button{
-    padding: 15px;
+    padding: 2rem 9rem 2rem 9rem;
+    z-index: 2;
+    letter-spacing: 4px;
+    font-size: 1.4rem;
+    border: none;
+    color: #fa0101;
+    background-color: white;
+    border-radius: 4px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+
 }
 .message{
-    font-family: "Creepster";
-    color: rgb(255, 3, 3);
+    font-family: 'Nosifer', sans-serif;
+    color: #fa0101;
     margin: 0;
     position: relative;
     text-transform: uppercase;
-    height: 200px;
-    letter-spacing: 10px;
+    letter-spacing: 1px;
+    padding-bottom: 90px;
     text-align: center;
+    font-size: 2.5rem;
 }
-.donwload-part h1{
-    font-size: 2rem;
-    color: #fa0101;
-}
+
 .drop{
     position: absolute;
-    top: 65%;
-    width: .1em;
-    height: .1em;
+    top: 53vh;
+    width: .4em;
+    background-color: #fa0101;
+    height: .4em;
     border-radius: 0 100% 100% 100%;
-    box-shadow: 1px 1px 3px crimson;
+    box-shadow: 1px 1px 4px crimson;
     animation: drop 3s infinite both;
+    z-index: 2;
 }
+
 .drop:nth-child(1){
-    left: 18%;
+    left: 23.4%;
 }
 .drop:nth-child(2){
-    left: 39%;
+    left: 31%;
     animation-delay: -.5s ;
     width: .15em;
     height: .15em;
 }
 .drop:nth-child(3){
-    left: 55%;
+    left: 36%;
     animation-delay: -1.5s;
 }
 .drop:nth-child(4){
-    left: 88%;
+    left: 44%;
     width: .16em;
     height: .16em;
     animation-delay:-.10s ;
 }
 .drop:nth-child(5){
-    left: 35%;
+    left: 53.2%;
     animation-delay: -1.5s ;
 }
 .drop:nth-child(6){
-    left: 55%;
-    animation-delay: -.6s ;
+    left: 64%;
+    animation-delay: -.9s ;
 }
 .drop:nth-child(7){
-    left: 3%;
-    animation-delay: -.5s ;
+    left: 69.4vw;
+    animation-delay: -.6s ;
 }
 @keyframes drop {
     0%{
