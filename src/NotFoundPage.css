@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
-body{
 
-}
 .page-not-found {
     display: flex;
     flex-direction: column; /* Stack children vertically */

@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-body{
-    margin: 0;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    height: 100vh;
-    background: linear-gradient(#2f2f30,#141414);
-}
+
 video {
     object-fit: cover;
     position: fixed;
