@@ -29,7 +29,7 @@ function Footer() {
             <div className='footer-social-items'>
                 <a href='https://www.instagram.com/'><img src={instaLogo} alt='Instagram' /></a>
                 <a href='https://www.twitter.com/'><img src={twitterLogo} alt='Twitter' /></a>
-                <a href='https://www.twitter.com/'><img src={githubLogo} alt='Github' /></a>
+                <a href='https://github.com/FlexLV'><img src={githubLogo} alt='Github' /></a>
                 <a href='https://www.twitter.com/'><img src={youtubeLogo} alt='Youtube' /></a>
             </div>
             </div>

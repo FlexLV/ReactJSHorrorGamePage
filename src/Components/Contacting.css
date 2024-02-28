@@ -60,6 +60,7 @@
     flex-direction: column;
     gap: 25px;
     position: relative;
+    animation: ease-in-out 2s;
 }
 
 .contact-form input, .contact-form textarea {
@@ -105,9 +106,13 @@
 }
 
 .submit_button:hover {
-    background-color: darkblue;
+    background-color: rgb(204, 194, 0);
 }
 
+
+.incorrect-input{
+    background-color: #ff8d8d;
+}
 
 @media (max-width: 600px) {
     .contact-form-background {
@@ -116,4 +121,34 @@
             "aboutus"
             "form";
     }
+}
+
+.message-succesfuly-sent-box{
+    min-width: 100%;
+    max-width: 1900px;
+    margin-top: 1vh;
+    background-color: #FFC600;
+    color: #9DC08B;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 1fr 1fr;
+}
+.message-succesfuly-sent-box h1{
+    font-size: 21px;
+    display: flex;
+    justify-content: center;
+    color: #1288C5;
+    font-weight: bolder;
+}
+
+.message-succesfuly-sent-box h1:last-child{
+    margin-bottom: 60px;
+}
+
+.animating-message-sent{
+    margin-top: 40px;
+    margin-bottom: 20px;
 }

@@ -42,10 +42,10 @@ const LoginSignup = () => {
     };
 
     return (
-        <div className="container">
-            <div className="box-container">
+        <div className="container-login">
+            <div className="box-container-login">
             <video src="/images/manor_-_57598 (Original).mp4" autoPlay loop muted />
-            <div className="header">
+            <div className="header-login">
                 <div className="text">{action}</div>
                 <div className="underline"></div>
             </div>
@@ -79,7 +79,6 @@ const LoginSignup = () => {
                 <div className={action === "Login" ? "submit"  : "submit gray" } onClick={() => { setAction("Signup") }} >Sign Up</div>
                 <div className={action === "Signup" ? "submit" : "submit gray"} onClick={() => { setAction("Login") }} >Login</div>
                 <button className={action === "Signup" ? "submit" : "submit gray"} type="submit">Submit</button>
-
             </div>
             </form>
             </div>

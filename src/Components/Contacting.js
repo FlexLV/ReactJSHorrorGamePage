@@ -1,15 +1,41 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Contacting.css";
+import Lottie from "react-lottie";
+import animationData from "./Assets/Animation - 1709036717532.json"
 
 function Contacting() {
     const [message, setMessage] = useState('');
+    const [phoneNumberValid, setPhoneNumberValid] = useState(true);
+    const [sentScreen, setSentScreen] = useState(false);
     const maxChars = 1000;
 
     const handleChange = (event) => {
-      if (event.target.value.length <= maxChars) {
-        setMessage(event.target.value);
-      }
+        if (event.target.value.length <= maxChars) {
+            setMessage(event.target.value);
+        }
     };
+
+    const validatePhoneNumber = (phoneNumber) => {
+        const isValid = phoneNumber === '' || phoneNumber.startsWith('+');
+        setPhoneNumberValid(isValid);
+    };
+
+    const handleScreen = () => {
+        setSentScreen(!sentScreen);
+    };
+
+    useEffect(() => {
+        let timer;
+        if (sentScreen) {
+            timer = setTimeout(() => {
+                setSentScreen(false);
+                setMessage(''); 
+            }, 3000);
+        }
+
+        // Cleanup the timer
+        return () => clearTimeout(timer);
+    }, [sentScreen]);
 
     return(
         <div className='contact-form-background'>
@@ -23,33 +49,48 @@ function Contacting() {
             </div>
             <div className="contact-form-container">
                 <div className='contact-form'>
-                    <form>
-                        <div className="firstNameLastName">
-                            <input id="firstNameLastName" type='text' placeholder='First + Last Name' />
-                        </div>
-                        <div className="email-box">
-                            <input id="email" type='email' placeholder='Email' />
-                        </div>
-                        <div className="phoneNumber">
-                            <input type='numbers' placeholder='Phone Number (Optional)' />
-                        </div>
-                        <div className="text-box">
-                            <textarea 
-                                type='text' 
-                                placeholder='Please leave your message (max 1,000 characters)' 
-                                value={message}
-                                onChange={handleChange}
-                            />
-                            <div className="char-count">
-                                {message.length}/{maxChars}
+                    {!sentScreen ? (
+                        <form>
+                            <div className="firstNameLastName">
+                                <input id="firstNameLastName" type='text' placeholder='First + Last Name' />
                             </div>
+                            <div className="email-box">
+                                <input id="email" type='email' placeholder='Email' />
+                            </div>
+                            <div className="phoneNumber">
+                                <input
+                                    type='text'
+                                    placeholder='Phone Number (Optional)'
+                                    className={phoneNumberValid ? '' : 'incorrect-input'}
+                                    onChange={(e) => validatePhoneNumber(e.target.value)}
+                                />
+                            </div>
+                            <div className="text-box">
+                                <textarea 
+                                    type='text' 
+                                    placeholder='Please leave your message (max 1,000 characters)' 
+                                    value={message}
+                                    onChange={handleChange}
+                                />
+                                <div className="char-count">
+                                    {message.length}/{maxChars}
+                                </div>
+                            </div>
+                            <button className="submit_button" type="submit" onClick={handleScreen} >Send Now!</button>
+                        </form>
+                    ) : (
+                        <div className="message-succesfuly-sent-box">
+                            <div className="animating-message-sent"> 
+                                <Lottie className="animation-message-sent" options={{ animationData, loop: false, autoplay: true }} height={160} width={160} />
+                            </div>
+                            <h1>Thank you!</h1>
+                            <h1>We'll get back to you soon</h1>
                         </div>
-                        <input className="submit_button" type="submit" value="Send Now" />
-                    </form>
+                    )}
                 </div>
-            </div>
+            </div> 
         </div>
     );
 }
 
-export default Contacting;
+export default Contacting
