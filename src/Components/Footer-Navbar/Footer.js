@@ -1,11 +1,11 @@
 import React from 'react'
-import { Button } from './Button'
+import { Button } from '../ElementComponaments/Button'
 import "./Footer.css"
 import { Link } from 'react-router-dom';
-import instaLogo from "./Assets/free-instagram-logo-icon-3497-thumb.png"
-import twitterLogo from "./Assets/Twitter_bird_logo_black.svg.png"
-import youtubeLogo from "./Assets/YouTube-icon-black-png.png"
-import githubLogo from "./Assets/25231.png"
+import instaLogo from "../Assets/free-instagram-logo-icon-3497-thumb.png"
+import twitterLogo from "../Assets/Twitter_bird_logo_black.svg.png"
+import youtubeLogo from "../Assets/YouTube-icon-black-png.png"
+import githubLogo from "../Assets/25231.png"
 
 function Footer() {
   return (

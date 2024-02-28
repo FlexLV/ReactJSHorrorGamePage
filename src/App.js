@@ -1,8 +1,8 @@
 import React from 'react';
-import Navbar from './Components/Navbar.jsx';
-import HeroSection from './Components/HeroSection.js';
-import Cards from './Components/Cards.js';
-import Footer from './Components/Footer.js';
+import Navbar from './Components/Footer-Navbar/Navbar.jsx';
+import HeroSection from './Components/MainPage-Componaments/HeroSection.js';
+import Cards from './Components/MainPage-Componaments/Cards.js';
+import Footer from './Components/Footer-Navbar/Footer.js';
 
 function App() {
   return (

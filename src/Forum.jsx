@@ -1,8 +1,8 @@
 import './App.js';
-import Navbar from './Components/Navbar.jsx'; // Import Header once
+import Navbar from './Components/Footer-Navbar/Navbar.jsx'; // Import Header once
 import "./App.css"
-import Footer from './Components/Footer.js';
-import Foruming from './Components/Foruming.jsx';
+import Footer from './Components/Footer-Navbar/Footer.js';
+import Foruming from './Components/Forum/Foruming.jsx';
 
 function Forum (){
     return(

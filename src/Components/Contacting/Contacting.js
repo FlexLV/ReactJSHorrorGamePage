@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Contacting.css";
 import Lottie from "react-lottie";
-import animationData from "./Assets/Animation - 1709036717532.json"
+import animationData from "..//Assets/Animation - 1709036717532.json"
 
 function Contacting() {
     const [message, setMessage] = useState('');
@@ -51,13 +51,13 @@ function Contacting() {
                 <div className='contact-form'>
                     {!sentScreen ? (
                         <form>
-                            <div className="firstNameLastName">
+                            <div>
                                 <input id="firstNameLastName" type='text' placeholder='First + Last Name' />
                             </div>
-                            <div className="email-box">
+                            <div>
                                 <input id="email" type='email' placeholder='Email' />
                             </div>
-                            <div className="phoneNumber">
+                            <div>
                                 <input
                                     type='text'
                                     placeholder='Phone Number (Optional)'
@@ -65,7 +65,7 @@ function Contacting() {
                                     onChange={(e) => validatePhoneNumber(e.target.value)}
                                 />
                             </div>
-                            <div className="text-box">
+                            <div >
                                 <textarea 
                                     type='text' 
                                     placeholder='Please leave your message (max 1,000 characters)' 
@@ -81,7 +81,7 @@ function Contacting() {
                     ) : (
                         <div className="message-succesfuly-sent-box">
                             <div className="animating-message-sent"> 
-                                <Lottie className="animation-message-sent" options={{ animationData, loop: false, autoplay: true }} height={160} width={160} />
+                                <Lottie options={{ animationData, loop: false, autoplay: true }} isClickToPauseDisabled={true} height={160} width={160} />
                             </div>
                             <h1>Thank you!</h1>
                             <h1>We'll get back to you soon</h1>
