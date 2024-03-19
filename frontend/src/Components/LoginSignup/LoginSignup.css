@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+@keyframes gradientBackground {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+.background-login {
+    background: linear-gradient(45deg, #6a11cb, #2575fc, #8e2de2, #4a00e0, #8e2de2, #4a00e0, #8e2de2);
+    background-size: 600% 600%;
+    animation: gradientBackground 15s ease infinite;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+  }
+.container-login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.box-container-login{
+    margin-top: 20px;
+    width: auto ;
+    min-width: 20%;
+    height: auto;
+    background-color: rgba(232, 228, 228, 0.747);
+    position: relative;
+}
+.box-container-large{
+    margin-top: 30px;
+    width: 100vh;
+    height: 190vh;
+    background-color: rgba(232, 228, 228, 0.747);
+    position: relative;
+}
+.header-login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1px;
+    padding-top: 20px;
+}
+
+.text{
+    color: #3c009d;
+    font-size: 48px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+}
+
+.underline{
+    width: 61px;
+    height: 6px;
+    background: #3c009d;
+    border-radius: 9px;
+    position: relative;
+}
+.inputs{
+    margin-top: 55px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.input{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 480px;
+    height: 55px;
+    background: #d8d8d8;
+    border-radius: 6px;
+    position: relative;
+}
+.input img{
+    margin: 0px 30px;
+}
+.input input{
+    height: 50px;
+    width: 400px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #797979;
+    font-size: 19px;
+}
+.forgot-password{
+    padding-left: 60px;
+    margin-top: 27px;
+    color: #797979;
+    font-size: 18px;
+}
+.forgot-password span{
+    color: #4c00b4;
+    cursor: pointer;
+}
+
+.submit-container{
+    display: flex;
+    gap: 25px;
+    margin: 40px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 230px;
+    height: 50px;
+    color: #fff;
+    background-color: #4c00b4;
+    border-radius: 13px;
+    font-size: 19px;
+    font-weight: 700;
+    cursor: pointer;
+
+}
+.position-of-both-login-signup{
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Centers the buttons horizontally within the container */
+  }
+.green{
+    background-color: rgb(17, 146, 2);
+    color: white;
+    border-color: black;
+    flex-direction: column;
+    width: 470px;
+}
+.gray{
+    margin-right: 13px;
+    margin-left: 13px;
+    background-color: #EAEAEA;
+    color: #676767;
+}
