@@ -31,11 +31,13 @@ video {
 }
 .hero-btns{
     margin-top: 32px;
+    padding: 13px;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
 }
 
-.hero-btns .btn {
-    margin: 6px;
-}
+
 .fa-play-circle{
     margin-left: 4px;
 }

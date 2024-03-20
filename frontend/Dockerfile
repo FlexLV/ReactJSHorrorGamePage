@@ -1,17 +1,17 @@
-# Stage 1: Build the frontend
-FROM node:20 AS frontend-builder
+# Use a Node.js base image
+FROM node:20
 
-ENV NODE_ENV=frontend-builder
+# Set the working directory in the container
+WORKDIR /usr/src/app
 
-WORKDIR /frontend
+# Copy package.json and package-lock.json
+COPY package*.json ./
 
-COPY package.json .
-COPY package-lock.json .
-
+# Install dependencies
 RUN npm install
 
+# Copy the rest of the application
 COPY . .
 
-RUN npm run build
-
-CMD ["sh", "-c", "npm run start:frontend-builder"]
+# Command to run the frontend server
+CMD ["npm", "start"]

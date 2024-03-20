@@ -11,7 +11,7 @@ function HeroSection() {
         <p>What are you waiting for?</p>
         <div className='hero-btns'>
             <Button
-            link="/donwload"
+            link="/download"
             className="btns"
             buttonStyle="btn--outline"
             buttonSize="btn--large"

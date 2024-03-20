@@ -6,7 +6,7 @@ function Termsandconditions(){
     return(
         <div className="termsandconditions-container">
             <h2><strong>Terms and Conditions</strong></h2>
-
+            <div className="intross">
             <p>Welcome to Ethernal Nightmares!</p>
 
             <p>These terms and conditions outline the rules and regulations for the use of Ethernal Nightmares's Website, located at ethernalnightmares.com.</p>
@@ -24,7 +24,8 @@ function Termsandconditions(){
             <h3><strong>License</strong></h3>
 
             <p>Unless otherwise stated, Ethernal Nightmares and/or its licensors own the intellectual property rights for all material on Ethernal Nightmares. All intellectual property rights are reserved. You may access this from Ethernal Nightmares for your own personal use subjected to restrictions set in these terms and conditions.</p>
-
+            </div>
+            <div className="what-you-must-not-do">
             <p>You must not:</p>
             <ul>
                 <li>Republish material from Ethernal Nightmares</li>
@@ -32,8 +33,8 @@ function Termsandconditions(){
                 <li>Reproduce, duplicate or copy material from Ethernal Nightmares</li>
                 <li>Redistribute content from Ethernal Nightmares</li>
             </ul>
-
-
+            </div>
+            <div className="other-random-bullshit">
             <p>Parts of this website offer an opportunity for users to post and exchange opinions and information in certain areas of the website. Ethernal Nightmares does not filter, edit, publish or review Comments prior to their presence on the website. Comments do not reflect the views and opinions of Ethernal Nightmares,its agents and/or affiliates. Comments reflect the views and opinions of the person who post their views and opinions. To the extent permitted by applicable laws, Ethernal Nightmares shall not be liable for the Comments or for any liability, damages or expenses caused and/or suffered as a result of any use of and/or posting of and/or appearance of the Comments on this website.</p>
 
             <p>Ethernal Nightmares reserves the right to monitor all Comments and to remove any Comments which can be considered inappropriate, offensive or causes breach of these Terms and Conditions.</p>
@@ -123,6 +124,7 @@ function Termsandconditions(){
             <p>The limitations and prohibitions of liability set in this Section and elsewhere in this disclaimer: (a) are subject to the preceding paragraph; and (b) govern all liabilities arising under the disclaimer, including liabilities arising in contract, in tort and for breach of statutory duty.</p>
 
             <p>As long as the website and the information and services on the website are provided free of charge, we will not be liable for any loss or damage of any nature.</p>
+            </div>
         </div>
     )
 }

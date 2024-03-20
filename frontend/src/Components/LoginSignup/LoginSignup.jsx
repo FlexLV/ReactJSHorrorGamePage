@@ -41,7 +41,7 @@ const LoginSignup = () => {
     return (
         <div className="background-login">
             <div className="container-login">
-                <div className="box-container-login">
+                <div className={action === "Sign up" ? "box-container-signup" : "box-container-login"}>
                 <div className="header-login">
                     <div className="text">{action}</div>
                     <div className="underline"></div>

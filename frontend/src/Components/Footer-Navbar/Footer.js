@@ -19,7 +19,7 @@ function Footer() {
             </p>
             <div className='input-areas'>
                 <form>
-                    <input type='email' name='email' placeholder='Your email' className='footer-input'/>
+                    <input type='email' name='email' placeholder='Enter your email' className='footer-input'/>
                     <Button buttonStyle = "btn--outline" buttonSize="btn--medium">Subscribe</Button>
                 </form>
             </div>
@@ -37,7 +37,7 @@ function Footer() {
                 <div className='footer-link-items'>
                     <Link to="/">Home</Link>
                     <Link to="/contact">Contact</Link>
-                    <Link to="/donwload">Download</Link>
+                    <Link to="/download">Download</Link>
                     <Link to="/forum">Forum</Link>
                 </div>
             </div>
