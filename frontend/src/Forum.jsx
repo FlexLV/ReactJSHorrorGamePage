@@ -6,11 +6,11 @@ import Foruming from './Components/Forum/Foruming.jsx';
 
 function Forum (){
     return(
-        <div>
+      <>
         <Navbar />
         <Foruming />
         <Footer />
-      </div>
+      </>
     )
 }
 

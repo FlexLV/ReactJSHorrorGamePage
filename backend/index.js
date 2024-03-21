@@ -10,8 +10,8 @@ app.use(express.static(path.join(__dirname, '../frontend/build')));
 // MySQL connection
 const connection = mysql.createConnection({
     host: 'database', // Change 'localhost' to 'database'
-    user: 'localhost', // Empty string for username
-    password: '123', // Empty string for password
+    user: 'root', // Empty string for username
+    password: '1234', // Empty string for password
     database: 'horrorgameforum'
 });
 
