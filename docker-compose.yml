@@ -1,24 +1,29 @@
-version: '3.8'
-
+version: '3'
 services:
   database:
     image: mysql:latest
     environment:
-      MYSQL_ROOT_PASSWORD: "1234"
+      MYSQL_ROOT_PASSWORD: ""
       MYSQL_DATABASE: horrorgameforum
     ports:
-      - "1317:1316"
+      - "1317:3306"
     volumes:
-      - db_data:/var/lib/mysql
+      - ./backend/horrorgameforum.sql:/docker-entrypoint-initdb.d/horrorgameforum.sql
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
 
   backend:
-    build:
-      context: ./backend
-      dockerfile: Dockerfile
+    build: ./backend
     ports:
-      - "3011:3011"
+      - "3017:3017" # Map container port 3017 to host port 3017
     depends_on:
-      - database
+      database:
+        condition: service_healthy
 
-volumes:
-  db_data:
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000" # Map container port 3000 to host port 3000 (adjust as necessary)
